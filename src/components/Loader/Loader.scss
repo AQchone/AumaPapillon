@@ -1,0 +1,45 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: #f3eee8;
+  font-size: 40px;
+}
+
+.spinner {
+  background-image: url(../../assets/Completelogo.svg) !important;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+  animation: fadeInOut 1.7s linear infinite;
+  text-align: center;
+}
+
+.spinner1 {
+  background-color: rgba(255, 255, 255, 0);
+  width: 100px;
+  height: 100px;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

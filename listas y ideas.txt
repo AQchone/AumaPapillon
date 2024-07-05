@@ -1,0 +1,6 @@
+ideas:
+- agregar botones a en imagenes de pagina origina de react
+- sublistas
+- maquetado modificado 
+
+

@@ -1,0 +1,144 @@
+@font-face {
+  font-family: "AbrilFatface-Regular";
+  src: url("../../fonts/AbrilFatface-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Literata";
+  src: url("../../fonts/Literata-VariableFont_opsz\,wght.ttf")
+    format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.nosotros {
+  background-color: #f3eee8;
+  height: auto;
+}
+
+.titular {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.titular__h2 {
+  font-family: "AbrilFatface-Regular";
+  font-size: 4rem;
+  color: #cab7a6;
+  align-self: center;
+  padding-left: 20px;
+  padding-top: 15px;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+}
+
+.miembros {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: auto;
+  width: 100%;
+  grid-gap: 0px;
+  padding: 10px;
+}
+
+.miembros__contenido {
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  height: auto;
+  background-color: #f3eee8;
+  transition: 1s;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.miembros__texto-imagen {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.miembros__texto-imagen2 {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.miembros__texto {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.miembros__imagen {
+  margin-left: 20px;
+  display: flex;
+  justify-content: space-around;
+
+  @media (max-width: 768px) {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+}
+
+.miembros__imagen2 {
+  margin-left: 20px;
+
+  @media (max-width: 768px) {
+    display: contents;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  img {
+    max-width: 70%;
+    max-height: 70%;
+  }
+}
+
+.miembros__info1 {
+  font-family: "Literata";
+  font-size: 1.5rem;
+  color: #412e27;
+}
+
+.miembros__info2 {
+  font-family: "Literata";
+  font-size: 1.6rem;
+  color: #412e27;
+}
+
+.dos {
+  flex-direction: row-reverse;
+}
