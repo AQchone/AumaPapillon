@@ -5,11 +5,13 @@
   "homepage": "https://AQchone.github.io/AumaPapillon/",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "vite build",
+    "postbuild": "ls -R dist",
     "preview": "vite preview"
+  },
+  "engines": {
+    "node": "14.x"
   },
   "dependencies": {
     "animate.css": "^4.1.1",
