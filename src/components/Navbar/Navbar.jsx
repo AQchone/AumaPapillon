@@ -54,8 +54,11 @@ export const Navbar = () => {
             <Link to="/productos/Mobiliario" onClick={handleOffcanvasToggle}>
               Mobiliario
             </Link>
-            <Link to="/productos/PiezasDeco" onClick={handleOffcanvasToggle}>
-              Piezas Deco
+            <Link
+              to="/productos/PiezasDecoLuminarias"
+              onClick={handleOffcanvasToggle}
+            >
+              Piezas Deco y Luminarias
             </Link>
             <Link to="/productos/Herrajes" onClick={handleOffcanvasToggle}>
               Herrajes

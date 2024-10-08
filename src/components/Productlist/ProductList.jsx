@@ -112,10 +112,15 @@ const ProductList = () => {
               <span className="button-text-product">Herrajes</span>
             </div>
           </Link>
-          <Link to="/productos/PiezasDeco" className="button-container2">
+          <Link
+            to="/productos/PiezasDecoLuminarias"
+            className="button-container2"
+          >
             <div className="image-container">
               <img src={images[7]} className="button-img2" alt="" />
-              <span className="button-text-product">Piezas Deco</span>
+              <span className="button-text-product">
+                Piezas Deco y Luminarias
+              </span>
             </div>
           </Link>
         </div>
