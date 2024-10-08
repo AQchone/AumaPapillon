@@ -119,7 +119,8 @@ const ProductList = () => {
             <div className="image-container">
               <img src={images[7]} className="button-img2" alt="" />
               <span className="button-text-product">
-                Piezas Deco y Luminarias
+                Piezas Deco
+                <br />y Luminaria
               </span>
             </div>
           </Link>
