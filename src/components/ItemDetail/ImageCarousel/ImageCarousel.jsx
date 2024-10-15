@@ -24,6 +24,7 @@ const ImageCarousel = ({ item }) => {
           width="300px"
           height="300px"
           showThumbs={false}
+          showStatus={imageKeys.length > 1}
           showIndicators={imageKeys.length > 1}
           className="carousel-container"
         >
