@@ -18,12 +18,13 @@ const ImageCarousel = ({ item }) => {
     <>
       {showCarousel ? (
         <Carousel
-          showArrows={true}
+          showArrows={imageKeys.length > 1}
           dynamicHeight={false}
           infiniteLoop={true}
           width="300px"
           height="300px"
           showThumbs={false}
+          showIndicators={imageKeys.length > 1}
           className="carousel-container"
         >
           {imageKeys.map((key, index) => (
