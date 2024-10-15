@@ -4,7 +4,21 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ImageCarousel = ({ item }) => {
-  const showCarousel = item.img && item.img2 && item.img3;
+  // Función para obtener todas las imágenes del item
+  const getImages = (item) => {
+    const images = [];
+    let index = 1;
+    while (item[`img${index}`]) {
+      images.push(item[`img${index}`]);
+      index++;
+    }
+    return images;
+  };
+
+  const images = getImages(item);
+
+  // Mostramos el carrusel solo si hay más de una imagen
+  const showCarousel = images.length > 1;
 
   return (
     <>
@@ -18,18 +32,18 @@ const ImageCarousel = ({ item }) => {
           showThumbs={false}
           className="carousel-container"
         >
-          <div>
-            <img src={item.img} alt={item.nombre} />
-          </div>
-          <div>
-            <img src={item.img2} alt={`${item.nombre} - Imagen 2`} />
-          </div>
-          <div>
-            <img src={item.img3} alt={`${item.nombre} - Imagen 3`} />
-          </div>
+          {images.map((img, index) => (
+            <div key={index}>
+              <img src={img} alt={`${item.nombre} - Imagen ${index + 1}`} />
+            </div>
+          ))}
         </Carousel>
       ) : (
-        <img src={item.img} className="imgsizedetail" alt={item.nombre} />
+        <img
+          src={images[0] || item.img1}
+          className="imgsizedetail"
+          alt={item.nombre}
+        />
       )}
     </>
   );
