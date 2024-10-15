@@ -4,11 +4,15 @@ import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 const ImageCarousel = ({ item }) => {
-  const imageUrls = Object.entries(item)
-    .filter(([key, value]) => key.startsWith("img") && value)
-    .map(([_, value]) => value);
+  const imageKeys = Object.keys(item)
+    .filter((key) => key.startsWith("img") && item[key])
+    .sort((a, b) => {
+      const aNum = parseInt(a.replace("img", "")) || 0;
+      const bNum = parseInt(b.replace("img", "")) || 0;
+      return aNum - bNum;
+    });
 
-  const showCarousel = imageUrls.length > 1;
+  const showCarousel = imageKeys.length > 0;
 
   return (
     <>
@@ -22,9 +26,12 @@ const ImageCarousel = ({ item }) => {
           showThumbs={false}
           className="carousel-container"
         >
-          {imageUrls.map((url, index) => (
-            <div key={index}>
-              <img src={url} alt={`${item.nombre} - Imagen ${index + 1}`} />
+          {imageKeys.map((key, index) => (
+            <div key={key}>
+              <img
+                src={item[key]}
+                alt={`${item.nombre} - Imagen ${index + 1}`}
+              />
             </div>
           ))}
         </Carousel>
