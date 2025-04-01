@@ -1,0 +1,55 @@
+/* AppConstruction.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.construction-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem;
+}
+
+.construction-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  text-align: center;
+}
+
+.construction-logo {
+  max-width: 200px;
+  margin-bottom: 2rem;
+}
+
+.construction-title {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 2.5rem;
+  color: #333;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 1rem;
+}
+
+.construction-message {
+  font-family: "Arial", sans-serif;
+  font-size: 1.2rem;
+  color: #666;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .construction-title {
+    font-size: 2rem;
+  }
+
+  .construction-logo {
+    max-width: 150px;
+  }
+}

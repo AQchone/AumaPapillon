@@ -1,15 +1,19 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import { CartProvider } from "./context/CartContext";
-import AppRouter from "./router/AppRouter";
-import { Footer } from "./components/Footer/Footer";
+import "./AppConstruction.css";
+import imgAuma from "./assets/Auma.svg";
 
 function App() {
   return (
-    <CartProvider>
-      <AppRouter />
-      <Footer />
-    </CartProvider>
+    <div className="construction-container">
+      <div className="construction-content">
+        <img src={imgAuma} alt="Auma Logo" className="construction-logo" />
+        <h1 className="construction-title">En Construcción</h1>
+        <p className="construction-message">
+          Estamos trabajando para brindarte una mejor experiencia. Vuelve
+          pronto.
+        </p>
+      </div>
+    </div>
   );
 }
 
